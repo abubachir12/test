@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Сетевые графики и Документация ИС</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .question { margin-bottom: 20px; padding: 15px; border-left: 5px solid #3498db; background: #fafafa; }
+        .question p { font-weight: bold; margin-bottom: 10px; }
+        label { display: block; margin-bottom: 8px; cursor: pointer; }
+        input[type="radio"] { margin-right: 10px; }
+        button { display: block; width: 100%; padding: 15px; background: #3498db; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; margin-top: 20px; }
+        button:hover { background: #2980b9; }
+        #results { margin-top: 30px; padding: 20px; display: none; border-radius: 8px; text-align: center; }
+        .score-box { display: flex; justify-content: space-around; margin-top: 20px; }
+        .result-card { background: #ebf5fb; padding: 15px; border-radius: 8px; width: 45%; border: 1px solid #d6eaf8; }
+        .high-score { color: #27ae60; font-weight: bold; font-size: 24px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Тестирование: Сетевое планирование и документация ИТ-проектов</h1>
+    <form id="quizForm">
+        <!-- Вопросы -->
+        <div class="question">
+            <p>1. Что такое критический путь в сетевом графике?</p>
+            <label><input type="radio" name="q1" value="0"> Путь с наибольшим количеством задач</label>
+            <label><input type="radio" name="q1" value="1"> Самый продолжительный путь, определяющий срок проекта</label>
+            <label><input type="radio" name="q1" value="0"> Путь с наибольшими финансовыми затратами</label>
+        </div>
+
+        <div class="question">
+            <p>2. Какой резерв времени у работ, находящихся на критическом пути?</p>
+            <label><input type="radio" name="q2" value="1"> Ноль</label>
+            <label><input type="radio" name="q2" value="0"> Неограниченный</label>
+            <label><input type="radio" name="q2" value="0"> Минимум 10% от длительности</label>
+        </div>
+
+        <div class="question">
+            <p>3. Какой ГОСТ регулирует руководство по проектному менеджменту (сетевые графики)?</p>
+            <label><input type="radio" name="q3" value="0"> ГОСТ 34.602</label>
+            <label><input type="radio" name="q3" value="1"> ГОСТ Р ИСО 21500-2013</label>
+            <label><input type="radio" name="q3" value="0"> ГОСТ 19.101</label>
+        </div>
+
+        <div class="question">
+            <p>4. В чем главное отличие метода PERT от CPM?</p>
+            <label><input type="radio" name="q4" value="0"> PERT используется только в строительстве</label>
+            <label><input type="radio" name="q4" value="1"> PERT использует вероятностные оценки времени (оптимистичный/пессимистичный)</label>
+            <label><input type="radio" name="q4" value="0"> CPM не позволяет строить графики</label>
+        </div>
+
+        <div class="question">
+            <p>5. Какой процент неудач ИТ-проектов прогнозирует IDC при отсутствии документации?</p>
+            <label><input type="radio" name="q5" value="0"> 15%</label>
+            <label><input type="radio" name="q5" value="1"> До 40%</label>
+            <label><input type="radio" name="q5" value="0"> 75%</label>
+        </div>
+
+        <div class="question">
+<p>6. Что включает в себя техническая документация по ГОСТ 34?</p>
+            <label><input type="radio" name="q6" value="1"> ТЗ, описание постановки задач, пояснительную записку</label>
+            <label><input type="radio" name="q6" value="0"> Рекламные буклеты и прайс-листы</label>
+            <label><input type="radio" name="q6" value="0"> Только должностные инструкции</label>
+        </div>
+
+        <div class="question">
+            <p>7. Цель маркетинговой документации в УЦП?</p>
+            <label><input type="radio" name="q7" value="0"> Описание структуры базы данных</label>
+            <label><input type="radio" name="q7" value="1"> Обоснование преимуществ (ROI, KPI) для заказчика</label>
+            <label><input type="radio" name="q7" value="0"> Фиксация ошибок кода</label>
+        </div>
+
+        <div class="question">
+            <p>8. Когда создается отчетная документация?</p>
+            <label><input type="radio" name="q8" value="0"> До начала проекта</label>
+            <label><input type="radio" name="q8" value="1"> По завершении этапов или всего проекта</label>
+            <label><input type="radio" name="q8" value="0"> Только в случае провала проекта</label>
+        </div>
+
+        <div class="question">
+            <p>9. Что такое "полный резерв времени" работы?</p>
+            <label><input type="radio" name="q9" value="1"> Время, на которое можно отложить работу без сдвига даты окончания проекта</label>
+            <label><input type="radio" name="q9" value="0"> Время обеденного перерыва команды</label>
+            <label><input type="radio" name="q9" value="0"> Время на исправление багов</label>
+        </div>
+
+        <div class="question">
+            <p>10. Для чего нужна оптимизация сетевого графика по стоимости?</p>
+            <label><input type="radio" name="q10" value="0"> Чтобы увеличить бюджет</label>
+            <label><input type="radio" name="q10" value="1"> Чтобы сократить сроки за счет привлечения доп. ресурсов при мин. затратах</label>
+            <label><input type="radio" name="q10" value="0"> Чтобы уволить лишних сотрудников</label>
+        </div>
+
+        <div class="question">
+            <p>11. Какая ИС в логистике чаще всего требует сетевого планирования при внедрении?</p>
+            <label><input type="radio" name="q11" value="1"> ERP / WMS системы</label>
+            <label><input type="radio" name="q11" value="0"> Обычный калькулятор</label>
+            <label><input type="radio" name="q11" value="0"> Текстовый редактор</label>
+        </div>
+
+        <div class="question">
+            <p>12. К какому виду относится «Руководство пользователя»?</p>
+            <label><input type="radio" name="q12" value="1"> Пользовательская (техническая) документация</label>
+            <label><input type="radio" name="q12" value="0"> Отчетная документация</label>
+            <label><input type="radio" name="q12" value="0"> Проектная документация</label>
+        </div>
+
+        <div class="question">
+            <p>13. Что описывает ГОСТ Р 54869?</p>
+            <label><input type="radio" name="q13" value="1"> Требования к управлению проектом</label>
+            <label><input type="radio" name="q13" value="0"> Кодирование на языке Java</label>
+            <label><input type="radio" name="q13" value="0"> Правила оформления бухгалтерских отчетов</label>
+        </div>
+
+        <div class="question">
+            <p>14. Как цифровизация изменила документацию (ГОСТ 15910)?</p>
+            <label><input type="radio" name="q14" value="0"> Документация стала не нужна</label>
+            <label><input type="radio" name="q14" value="1"> Появились интерактивные справки и чат-боты</label>
+            <label><input type="radio" name="q14" value="0"> Документы стали только бумажными</label>
+        </div>
+<div class="question">
+            <p>15. Какую роль играет сетевой график в управлении рисками?</p>
+            <label><input type="radio" name="q15" value="1"> Позволяет визуализировать "узкие места" и критические точки</label>
+            <label><input type="radio" name="q15" value="0"> Никакой роли не играет</label>
+            <label><input type="radio" name="q15" value="0"> Заменяет собой страховой полис</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Завершить тест и показать результаты</button>
+    </form>
+
+    <div id="results">
+        <h2>Результаты тестирования</h2>
+        <div class="score-box">
+            <div class="result-card">
+                <p>Ваш результат (Вы):</p>
+                <p class="high-score" id="userScore">0 / 15</p>
+            </div>
+            <div class="result-card">
+                <p>Результат одногруппника (Иван П.):</p>
+                <p class="high-score">14 / 15</p>
+            </div>
+        </div>
+        <p style="margin-top:20px; font-style: italic;">Скриншот данного окна необходимо разместить в презентации.</p>
+    </div>
+</div>
+
+<script>
+    function checkQuiz() {
+        let score = 0;
+        const form = document.getElementById('quizForm');
+        const formData = new FormData(form);
+        
+        for (let value of formData.values()) {
+            score += parseInt(value);
+        }
+
+        document.getElementById('userScore').textContent = score + " / 15";
+        document.getElementById('quizForm').style.display = 'none';
+        document.getElementById('results').style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
